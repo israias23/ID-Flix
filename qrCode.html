@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Code Redirect</title>
+    <link rel="stylesheet" href="./styleQrCode.css" />
+    <!-- biblioteca do QR Code (pode ser obtida no site https://davidshimjs.github.io/qrcodejs/) -->
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
+    <!-- biblioteca jsPDF para gerar PDFs (pode ser obtida no site https://github.com/eKoopmans/html2pdf) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  </head>
+  <body>
+    <div class="text">
+      <h1>Yor Website in QR Code</h1>
+      <p>https://animated-speculoos-622f0f.netlify.app/</p>
+    </div>
+    <div id="qrcode"></div>
+
+    <div class="styleButton" style="margin-top: 20px">
+      <button onclick="downloadQR('pdf')">Baixar como PDF</button>
+      <button onclick="downloadQR('png')">Baixar como PNG</button>
+    </div>
+    <script>
+      // Link para o qual o usuário será direcionado
+      var link = "https://animated-speculoos-622f0f.netlify.app/";
+
+      // Configurações do QR Code
+      var qrcode = new QRCode(document.getElementById("qrcode"), {
+        text: link,
+        width: 228,
+        height: 228,
+        margin: 30,
+      });
+
+      // Função para baixar o QR Code como PDF ou PNG
+      function downloadQR(format) {
+        var canvas = document
+          .getElementById("qrcode")
+          .getElementsByTagName("canvas")[0];
+        var link = document.createElement("a");
+
+        if (format === "pdf") {
+          // Baixar como PDF
+          var pdf = new jsPDF();
+          pdf.addImage(canvas.toDataURL("image/png"), "PNG", 0, 0);
+          pdf.save("qrcode.pdf");
+        } else if (format === "png") {
+          // Baixar como PNG
+          link.href = canvas.toDataURL("image/png");
+          link.download = "qrcode.png";
+          link.click();
+        }
+      }
+    </script>
+  </body>
+</html>
