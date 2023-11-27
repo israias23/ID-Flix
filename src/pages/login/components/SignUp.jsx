@@ -15,11 +15,11 @@ export function SignUp({ setWhichIsUpper }) {
       >
         <h2 className="mb-6 text-center text-4xl font-bold">Criar uma Conta</h2>
 
-        <InputForm type="text" placeholder="Nome completo" />
-        <InputForm type="email" placeholder="E-mail" />
-        <InputForm type="text" placeholder="CPF" />
-        <InputForm type="text" placeholder="ID Jovem" />
-        <InputForm type="password" placeholder="Senha" />
+        <InputForm type="text" name="full-name" placeholder="Nome completo" />
+        <InputForm type="email" name="email" placeholder="E-mail" />
+        <InputForm type="text" name="cpf" placeholder="CPF" />
+        <InputForm type="text" name="id-jovem" placeholder="ID Jovem" />
+        <InputForm type="password" name="password" placeholder="Senha" />
 
         <NormalButton type="submit">Criar uma conta</NormalButton>
 

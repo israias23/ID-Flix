@@ -17,9 +17,9 @@ export function SignIn({ setWhichIsUpper }) {
           Login na plataforma
         </h2>
 
-        <InputForm type="cpf" placeholder="CPF" />
-        <InputForm type="text" placeholder="ID Jovem" />
-        <InputForm type="password" placeholder="Senha" />
+        <InputForm type="cpf" name="cpf" placeholder="CPF" />
+        <InputForm type="text" name="id-jovem" placeholder="ID Jovem" />
+        <InputForm type="password" name="password" placeholder="Senha" />
 
         <a className="mt-6 border-b border-b-light-border-initial text-base leading-loose dark:border-b-dark-border-initial">
           Esqueceu o seu ID Jovem?

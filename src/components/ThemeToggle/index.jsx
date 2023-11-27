@@ -14,7 +14,13 @@ export function ThemeToggle({ isDarkTheme, setIsDarkTheme }) {
   }
 
   return (
-    <ThemeToggleContainer type="button" onClick={handleToggle}>
+    <ThemeToggleContainer
+      type="button"
+      title={
+        isDarkTheme ? 'Trocar para o tema claro' : 'Trocar para o tema escuro'
+      }
+      onClick={handleToggle}
+    >
       {isDarkTheme ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
     </ThemeToggleContainer>
   )
