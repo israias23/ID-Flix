@@ -21,7 +21,7 @@ export function SignIn({ setWhichIsUpper }) {
         <InputForm type="text" name="id-jovem" placeholder="ID Jovem" />
         <InputForm type="password" name="password" placeholder="Senha" />
 
-        <a className="mt-6 border-b border-b-light-border-initial text-base leading-loose dark:border-b-dark-border-initial">
+        <a className="mt-6 border-b border-b-light-shadow-initial text-base leading-loose dark:border-b-dark-shadow-initial">
           Esqueceu o seu ID Jovem?
         </a>
         <NormalButton type="submit" id="signInButton">

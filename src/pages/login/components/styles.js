@@ -28,8 +28,8 @@ export const NormalButton = styled.button`
   background-color: ${(props) => props.theme.primary};
   color: ${(props) => props.theme.text};
   box-shadow:
-    8px 8px 16px ${(props) => props.theme.border.initial},
-    -8px -8px 16px ${(props) => props.theme.border.final};
+    8px 8px 16px ${(props) => props.theme.shadow.initial},
+    -8px -8px 16px ${(props) => props.theme.shadow.final};
   border: none;
   border-radius: 1.5625rem;
 `
@@ -51,15 +51,15 @@ export const InputForm = styled.input`
 
   background-color: ${(props) => props.theme.background};
   box-shadow:
-    inset 2px 2px 4px ${(props) => props.theme.border.initial},
-    inset -2px -2px 4px ${(props) => props.theme.border.final};
+    inset 2px 2px 4px ${(props) => props.theme.shadow.initial},
+    inset -2px -2px 4px ${(props) => props.theme.shadow.final};
   border: none;
   border-radius: 0.5rem;
   outline: none;
 
   &:focus {
     box-shadow:
-      inset 4px 4px 4px ${(props) => props.theme.border.initial},
-      inset -4px -4px 4px ${(props) => props.theme.border.final};
+      inset 4px 4px 4px ${(props) => props.theme.shadow.initial},
+      inset -4px -4px 4px ${(props) => props.theme.shadow.final};
   }
 `

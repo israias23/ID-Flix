@@ -5,7 +5,7 @@ export const themes = {
     tertiary: '#bf2642',
     background: '#3b3a39',
     text: '#f2f2f0',
-    border: {
+    shadow: {
       initial: '#242629',
       final: '#141414',
     },
@@ -16,7 +16,7 @@ export const themes = {
     tertiary: '#bf2642',
     background: '#ecf0f3',
     text: '#181818',
-    border: {
+    shadow: {
       initial: '#d1d9e6',
       final: '#f9f9f9',
     },
