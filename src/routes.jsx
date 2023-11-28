@@ -1,7 +1,9 @@
 import { createBrowserRouter } from 'react-router-dom'
 
 import { BasePage } from './components/BasePage.jsx'
+
 import { LoginPage } from './pages/login'
+import { QRCodePage } from './pages/qrcode/index.jsx'
 
 export const router = createBrowserRouter([
   {
@@ -11,5 +13,9 @@ export const router = createBrowserRouter([
         <LoginPage />
       </BasePage>
     ),
+  },
+  {
+    path: '/qrcode',
+    element: <QRCodePage />,
   },
 ])
