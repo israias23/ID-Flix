@@ -3,14 +3,8 @@ import { Moon, Sun } from 'lucide-react'
 import { ThemeToggleContainer } from './styles'
 
 export function ThemeToggle({ isDarkTheme, setIsDarkTheme }) {
-  function handleToggle() {
-    if (isDarkTheme) {
-      setIsDarkTheme(false)
-      document.documentElement.className = ''
-    } else {
-      setIsDarkTheme(true)
-      document.documentElement.className = 'dark'
-    }
+  function handleToggleTheme() {
+    setIsDarkTheme((state) => !state)
   }
 
   return (
@@ -19,7 +13,7 @@ export function ThemeToggle({ isDarkTheme, setIsDarkTheme }) {
       title={
         isDarkTheme ? 'Trocar para o tema claro' : 'Trocar para o tema escuro'
       }
-      onClick={handleToggle}
+      onClick={handleToggleTheme}
     >
       {isDarkTheme ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
     </ThemeToggleContainer>

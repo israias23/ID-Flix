@@ -4,7 +4,7 @@ export const ThemeToggleContainer = styled.button`
   width: 2.5rem;
   height: 2.5rem;
 
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
 
@@ -22,4 +22,11 @@ export const ThemeToggleContainer = styled.button`
   color: ${(props) => props.theme.text};
   border: 1px solid ${(props) => props.theme.text};
   border-radius: 0.75rem;
+
+  @media screen and (max-width: 768px) {
+    top: auto;
+    bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
 `
