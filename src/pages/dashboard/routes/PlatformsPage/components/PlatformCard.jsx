@@ -8,6 +8,7 @@ const CardContainer = styled.div`
   justify-content: space-between;
   padding: 1.5rem;
   background-color: ${({ $backgroundColor }) => $backgroundColor};
+  color: white;
 
   button {
     background-color: inherit;

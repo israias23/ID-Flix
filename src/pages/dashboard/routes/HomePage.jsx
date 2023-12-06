@@ -11,7 +11,7 @@ export function HomePage() {
       <section className="mb-8 overflow-auto pb-2">
         <Heading>Novidades</Heading>
 
-        <ul className="flex flex-col gap-4">
+        <ul className="flex flex-col gap-4 text-dark-text">
           <li className="flex items-center justify-start gap-4 rounded-xl bg-light-primary p-8">
             <Tv size={28} />
             <h2 className="text-lg">
