@@ -17,7 +17,7 @@ export function DashboardPage() {
 
           <div className="ml-auto flex items-center gap-6 pl-10 pr-4">
             <Link to="/dashboard/notifications">
-              <NotificationIcon amount={3} />
+              <NotificationIcon amount={0} />
             </Link>
 
             <Link to="/dashboard/user">

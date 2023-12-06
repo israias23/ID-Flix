@@ -6,6 +6,13 @@ import { LoginPage } from './pages/login'
 import { QRCodePage } from './pages/qrcode/index.jsx'
 
 import { DashboardPage } from './pages/dashboard/index.jsx'
+import { HomePage } from './pages/dashboard/routes/HomePage.jsx'
+import { ArticlePage } from './pages/dashboard/routes/ArticlePage/index.jsx'
+import { loader as articleLoader } from './pages/dashboard/routes/ArticlePage/loader.js'
+import { PlatformsPage } from './pages/dashboard/routes/PlatformsPage/index.jsx'
+import { ForumPage } from './pages/dashboard/routes/ForumPage.jsx'
+import { NotificationsPage } from './pages/dashboard/routes/NotificationsPage.jsx'
+import { UserPage } from './pages/dashboard/routes/UserPage.jsx'
 
 export const router = createBrowserRouter([
   {
@@ -31,27 +38,28 @@ export const router = createBrowserRouter([
     children: [
       {
         path: '/dashboard/home',
-        element: <h1>Home</h1>,
+        element: <HomePage />,
       },
       {
         path: '/dashboard/plataformas',
-        element: <h1>Plataformas</h1>,
+        element: <PlatformsPage />,
       },
       {
         path: '/dashboard/:articleId',
-        element: <h1>Artigo</h1>,
+        element: <ArticlePage />,
+        loader: articleLoader,
       },
       {
         path: '/dashboard/forum',
-        element: <h1>Fórum</h1>,
+        element: <ForumPage />,
       },
       {
         path: '/dashboard/notifications',
-        element: <h1>Notificações</h1>,
+        element: <NotificationsPage />,
       },
       {
         path: '/dashboard/user',
-        element: <h1>Usuário</h1>,
+        element: <UserPage />,
       },
     ],
   },
