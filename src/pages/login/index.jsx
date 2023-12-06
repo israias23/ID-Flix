@@ -1,7 +1,8 @@
 import { useState } from 'react'
 
-import { SignIn as SignInContainer } from './components/SignIn'
-import { SignUp as SignUpContainer } from './components/SignUp'
+import { SignIn as SignInContainer } from './forms/SignIn'
+import { SignUp as SignUpContainer } from './forms/SignUp'
+import { ForgotPassword } from './forms/ForgotPassword'
 
 import logo from '../../assets/logo.svg'
 
@@ -18,6 +19,9 @@ export function LoginPage() {
         )}
         {whichIsUpper === 1 && (
           <SignUpContainer setWhichIsUpper={setWhichIsUpper} />
+        )}
+        {whichIsUpper === 2 && (
+          <ForgotPassword setWhichIsUpper={setWhichIsUpper} />
         )}
       </div>
     </main>

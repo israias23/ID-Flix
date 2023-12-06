@@ -39,7 +39,7 @@ export const BackwardButton = styled(NormalButton)`
   background-color: ${(props) => props.theme.secondary};
 `
 
-export const InputForm = styled.input`
+export const StyledInputForm = styled.input`
   width: 21.875rem;
   height: 2.5rem;
   padding-left: 1.5625rem;
